@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock paper scissor</title>
+
+</head>
+<body>
+    <link rel="stylesheet" href="rock-paper-scissor.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap" rel="stylesheet">
+    <h1>ROCK PAPER SCISSORS</h1>
+    <script>
+       
+        let computermove=''
+        let result= ''
+        let computerscore=0
+        let yourscore=0
+        let i=0
+    </script>
+
+    <div class="btns">
+    <button><img src="./download rock.png" alt="" width="250px" onclick="
+         var randomnumber=Math.random()
+        if(randomnumber>0 && randomnumber<1/3)
+        {
+           computermove='rock' 
+        }
+        else if(randomnumber>1/3 && randomnumber<2/3)
+        {
+            computermove='paper'
+        } 
+        else{
+            computermove='scissor'
+        }
+        if(computermove=='rock')
+        {
+            document.getElementById('res').textContent= `oho hooo it is tie!!!!`
+            result='tie'
+        }
+        else if (computermove=='scissor'){
+        
+            document.getElementById('res').textContent= `YOU WON!!!`
+            result='won'
+        
+        }
+        else
+        {
+            document.getElementById('res').textContent= `OHHOO YOU LOST !!!` 
+            result='loss'
+        }
+        document.getElementById('output').textContent= `computer choose:${computermove}`
+        console.log(computermove)
+        if(result=='tie')
+        {
+            document.getElementById('yscore').textContent=`Your score:${yourscore}`
+            document.getElementById('score').textContent=`Computer score:${computerscore}`
+
+        }
+        else if(result=='won')
+        {
+            yourscore+=1
+            document.getElementById('yscore').textContent=`Your score:${(yourscore)}`
+            document.getElementById('score').textContent=`Computer score:${computerscore}`
+        }
+        else{
+            computerscore+=1
+            document.getElementById('yscore').textContent=`Your score:${yourscore}`
+            document.getElementById('score').textContent=`Computer score:${(computerscore)}`
+        }
+        
+    "></button>
+    <button onclick="
+   
+   var randomnumber=Math.random()
+   if(randomnumber>0 && randomnumber<1/3)
+        {
+           computermove='rock' 
+        }
+        else if(randomnumber>1/3 && randomnumber<2/3)
+        {
+            computermove='paper'
+        } 
+        else{
+            computermove='scissor'
+        }
+        if(computermove=='rock')
+        {
+            document.getElementById('res').textContent= `YOU WON!!!`
+            result='won'
+        }
+        else if (computermove=='scissor'){
+        
+            document.getElementById('res').textContent= `OHHOO YOU LOST !!!`
+            result='loss'
+        
+        }
+        else
+        {
+            document.getElementById('res').textContent= `oho hooo it is tie!!!!` 
+            result='tie'
+        }
+        document.getElementById('output').textContent= `computer choose:${computermove}`
+        
+        if(result=='tie')
+        {
+            document.getElementById('yscore').textContent=`Your score:${yourscore}`
+            document.getElementById('score').textContent=`Computer score:${computerscore}`
+
+        }
+        else if(result=='won')
+        {
+            yourscore+=1
+            document.getElementById('yscore').textContent=`Your score:${(yourscore)}`
+            document.getElementById('score').textContent=`Computer score:${computerscore}`
+        }
+        else{
+            computerscore+=1
+            document.getElementById('yscore').textContent=`Your score:${yourscore}`
+            document.getElementById('score').textContent=`Computer score:${(computerscore)}`
+        }
+        console.log(randomnumber)"
+    ><img src="./images-removebg-preview.png" alt="" width="200px"></button>
+     <button 
+     onclick="
+   
+    var randomnumber=Math.random()
+   if(randomnumber>0 && randomnumber<1/3)
+        {
+           computermove='rock' 
+        }
+        else if(randomnumber>1/3 && randomnumber<2/3)
+        {
+            computermove='paper'
+        } 
+        else{
+            computermove='scissor'
+        }
+        if(computermove=='rock')
+        {
+            document.getElementById('res').textContent= `OHHOO YOU LOST !!!`
+            result='loss'
+        }
+        else if (computermove=='scissor'){
+        
+            document.getElementById('res').textContent= `oho hooo it is tie!!!!`
+            result='tie'
+        
+        }
+        else
+        {
+            document.getElementById('res').textContent= `YOU WON!!!` 
+            result='won'
+        }
+        document.getElementById('output').textContent= `computer choose:${computermove}`
+        
+        if(result=='tie')
+        {
+            document.getElementById('yscore').textContent=`Your score:${yourscore}`
+            document.getElementById('score').textContent=`Computer score:${computerscore}`
+
+        }
+        else if(result=='won')
+        {
+            yourscore+=1
+            document.getElementById('yscore').textContent=`Your score:${(yourscore)}`
+            document.getElementById('score').textContent=`Computer score:${computerscore}`
+        }
+        else{
+            computerscore+=1
+            document.getElementById('yscore').textContent=`Your score:${yourscore}`
+            document.getElementById('score').textContent=`Computer score:${(computerscore)}`
+        }"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRufQLQDS8PiNN3x7SowrHrO2zsbqRHg7WifA&s" alt="" width="250px"></button>
+    </div>
+    <div id="output" class="output"></div>
+    <div id="res" class="res"></div>
+    <div class="scores">
+    <div id="score" class="score"></div>
+    <div id="yscore" class="yscore"></div>
+    </div>
+   
+</body>
+</html>
